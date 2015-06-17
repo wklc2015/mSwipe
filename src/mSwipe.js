@@ -1,112 +1,6 @@
-var BASE = BASE || {};
 /**
- * ÂëΩÂêçÁ©∫Èó¥ÂáΩÊï∞
- * */
-BASE.namespace = function(name) {
-	var parts = name.split('.'),
-		i, size, parent = BASE;
-	if(parts[0] === 'BASE'){
-		parts = parts.slice(1);
-	}
-	size = parts.length;
-	for(i = 0; i < size; i++){
-		if(typeof parent[parts[i]] === 'undefined'){
-			parent[parts[i]] = {};
-		}
-		parent = parent[parts[i]];
-	}
-	return parent;
-};
-/**
- * Â∑•ÂÖ∑ÂáΩÊï∞
- * */
-BASE.namespace('BASE.COM.Utils');
-BASE.COM.Utils = (function() {
-	var me = {};
-	var _elementStyle = document.createElement('div').style;
-	var _vendor = (function() {
-		var vendors = ['t', 'webkitT', 'MozT', 'msT', 'OT'],
-			transform,
-			i = 0,
-			l = vendors.length;
-		for(; i < l; i++){
-			transform = vendors[i] + 'ransform';
-			if(transform in _elementStyle) return vendors[i].substr(0, vendors[i].length - 1);
-		}
-		return false;
-	})();
-
-	function _prefixStyle(style) {
-		if(_vendor === false) return false;
-		if(_vendor === '') return style;
-		return _vendor + style.charAt(0).toUpperCase() + style.substr(1);
-	}
-
-	me.extend = function(target, obj) {
-		for(var i in obj){
-			target[i] = obj[i];
-		}
-	};
-	me.extend(me.eventType = {}, {
-		touchstart : 1,
-		touchmove  : 1,
-		touchend   : 1,
-
-		mousedown : 2,
-		mousemove : 2,
-		mouseup   : 2,
-
-		pointerdown : 3,
-		pointermove : 3,
-		pointerup   : 3,
-
-		MSPointerDown : 3,
-		MSPointerMove : 3,
-		MSPointerUp   : 3
-	});
-	me.addEvent = function(el, type, fn, capture) {
-		el.addEventListener(type, fn, !!capture);
-	};
-	me.removeEvent = function(el, type, fn, capture) {
-		el.removeEventListener(type, fn, !!capture);
-	};
-	me.hasClass = function(e, c) {
-		var re = new RegExp("(^|\\s)" + c + "(\\s|$)");
-		return re.test(e.className);
-	};
-	me.addClass = function(e, c) {
-		if(me.hasClass(e, c)){
-			return;
-		}
-		var newclass = e.className.split(' ');
-		newclass.push(c);
-		e.className = newclass.join(' ');
-	};
-	me.removeClass = function(e, c) {
-		if(!me.hasClass(e, c)){
-			return;
-		}
-		var re = new RegExp("(^|\\s)" + c + "(\\s|$)", 'g');
-		e.className = e.className.replace(re, ' ');
-	};
-	var _transform = _prefixStyle('transform');
-	me.extend(me, {
-		hasTransform   : _transform !== false,
-		hasPerspective : _prefixStyle('perspective') in _elementStyle,
-		hasTouch       : 'ontouchstart' in window,
-		hasPointer     : window.PointerEvent || window.MSPointerEvent, // IE10 is prefixed
-		hasTransition  : _prefixStyle('transition') in _elementStyle
-	});
-	me.extend(me.style = {}, {
-		transform                : _transform,
-		transitionTimingFunction : _prefixStyle('transitionTimingFunction'),
-		transitionDuration       : _prefixStyle('transitionDuration'),
-		transformOrigin          : _prefixStyle('transformOrigin')
-	});
-	return me;
-}());
-/**
- * ÊªëÂä®ÂáΩÊï∞
+ * ª¨∂Ø∫Ø ˝
+ *
  * */
 BASE.namespace('BASE.COM.mSwipe');
 BASE.COM.mSwipe = (function() {
@@ -121,7 +15,7 @@ BASE.COM.mSwipe = (function() {
 		if(!this.container) return;
 		this.options = {
 			animated   : 0,
-			/*0:Âπ≥Êªë,1:Áº©Êîæ,2:Ë¶ÜÁõñ*/
+			/*0:∆Ωª¨,1:Àı∑≈,2:∏≤∏«*/
 			scaleTo    : 0.2,
 			/*effected when animated = 1*/
 			translateZ : true,
@@ -228,13 +122,15 @@ BASE.COM.mSwipe = (function() {
 					}
 					break;
 				case 1:
-					var absDistance = Math.abs(distance), activePage;
+					var absDistance = Math.abs(distance), activePage, otherPage;
 					if(distance > 0){
 						activePage = this.prevPage;
+						otherPage = this.nextPage;
 						this.oragin = this.direction === 'x' ? '100% 50%' : '50% 100%';
 						this.currPage.style[Utils.style.transformOrigin] = '50% 100%';
 					} else{
 						activePage = this.nextPage;
+						otherPage = this.prevPage;
 						this.oragin = this.direction === 'x' ? '0% 50%' : '50% 0%';
 					}
 					this.currPage.style[Utils.style.transformOrigin] = this.oragin;
@@ -244,6 +140,7 @@ BASE.COM.mSwipe = (function() {
 					} else{
 						this.currPage.style[Utils.style.transform] = 'translate' + this.direction.toUpperCase() + '(' + distance / 2 + 'px)' + this.translateZ;
 					}
+					otherPage && (otherPage.style[Utils.style.transform] = 'translate' + this.direction.toUpperCase() + '(0px)' + this.translateZ);
 					break;
 				case 2:
 					var absDistance = Math.abs(distance), activePage, otherPage;
@@ -330,7 +227,6 @@ BASE.COM.mSwipe = (function() {
 					break;
 			}
 			var hasBind = false;
-			console.log(activePageArray)
 			for(var i = 0, len = 3; i < len; i++){
 				if(activePageArray[i] && !hasBind){
 					activePageArray[i].addEventListener('transitionend', function() {
@@ -351,7 +247,6 @@ BASE.COM.mSwipe = (function() {
 		_transitionEnd : function() {
 			this.isAnimating = false;
 			this.initPosition(this.hasMoved);
-			console.log(2)
 			if(this.options.callback && '[object Function]' === Object.prototype.toString.call(this.options.callback)){
 				this.options.callback(this);
 			}
@@ -433,50 +328,3 @@ BASE.COM.mSwipe = (function() {
 		init : Init
 	}
 }());
-
-function Loaded() {
-	var Utils = BASE.COM.Utils;
-	var Events = Utils.hasTouch ? 'touchstart' : 'click';
-	var mSwipe = BASE.COM.mSwipe.init('mSwipe', {
-		direction : 'y',
-		//						speed: 10000,
-						startSlide: 2,
-		animated  : 0,
-		callback  : function(a) {
-			//			console.log(a)
-		}
-	});
-
-	function Header(PageSwipe) {
-		var indexHeader = document.querySelector('.indexHeader');
-		var li = indexHeader.querySelectorAll('li');
-		for(var i = 0, length = li.length; i < length; i++){
-			(function(i) {
-				Utils.addEvent(li[i], Events, function() {
-					var page = parseInt(this.innerHTML, 10) - 1;
-					PageSwipe.slideTo(page);
-				}, false)
-			}(i))
-		}
-		;
-		var btn = document.querySelectorAll('p[data-btn]');
-		for(var j = 0, btnLenth = btn.length; j < btnLenth; j++){
-			(function(i) {
-				Utils.addEvent(btn[i], Events, function(e) {
-					e.preventDefault();
-					e.stopPropagation();
-					var a = this.getAttribute('data-btn');
-					var b = this.getAttribute('data-params');
-					if(b){
-						PageSwipe[a] = !!parseInt(b, 10);
-					} else{
-						PageSwipe[a]();
-					}
-					return false;
-				})
-			}(j))
-		}
-	}
-
-	Header(mSwipe);
-}
