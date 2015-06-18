@@ -1,20 +1,141 @@
 <!DOCTYPE html>
 <html>
 
-	<head>
-		<meta charset="utf-8">
-		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
-		<meta name="format-detection" content="telephone=no"/>
-		<title>mSwipe.js</title>
-		<link rel="stylesheet" type="text/css" href="css/css.css"/>
-		<script src="js/mSwipe.js" type="text/javascript" charset="utf-8"></script>
-	</head>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no"/>
+	<meta name="format-detection" content="telephone=no"/>
+	<title>mSwipe.js</title>
+	<link rel="stylesheet" href="css/common.css"/>
+	<link rel="stylesheet" href="css/mSwipe.css"/>
+	<script src="lib/zepto-docs.min.js"></script>
+	<script src="src/BASE.js"></script>
+	<script src="src/mSwipe.js"></script>
+	<script>
+		function Loaded() {
+			var startSlide = 1;
+			var mSwipe = BASE.COM.mSwipe.init('mSwipe', {
+				direction  : 'x',
+				startSlide : 1,
+				animated   : 0
+			});
+			var eventName = BASE.COM.Utils.hasTouch ? 'tap' : 'click';
+			var $tab = $('.mIndexHeader').find('li')
+			$tab.on(eventName, function() {
+				var idx = $(this).index();
+				mSwipe.slideTo(idx);
+				$(this).addClass('current').siblings().removeClass('current');
+			})
+			$tab.eq(startSlide).triggerHandler(eventName);
+		}
+	</script>
+	<style>
+		.page {
+			padding:20px;
+		}
+	</style>
+</head>
 
-	<body onload="Loaded()">
-
-
-
-
-	</body>
-
+<body onload="Loaded()">
+<div class="mIndexHeader">
+	<ul>
+		<li>Home</li>
+		<li>Api</li>
+		<li>Demo</li>
+	</ul>
+</div>
+<div class="mIndexContent">
+	<ul class="mSwipe-wrap" id="mSwipe">
+		<li class="mSwipe-items">
+			<div class="page p1">
+				<p>一直想自己集成一个H5单页滑动插件，mSwipe.js就这样产生了。</p>
+				<p>写mSwipe.js的时候，查看过其他滑动效果，研究了他们的源码，其中主要Swipe.js和Iscroll.js</p>
+			</div>
+		</li>
+		<li class="mSwipe-items p2">
+			<div class="page p1">
+				<p>container为切换页面的包裹容器，是一个必填参数，可以为一个ID字符串或者DOM对象，</p>
+				<p>options为配置参数，可配置参数见下表。</p>
+				<table class="mIndexTable">
+					<tr>
+						<th>参数</th>
+						<th>说明</th>
+						<th>默认值</th>
+					</tr>
+					<tr>
+						<td>selector</td>
+						<td>目标切换页面的选择器</td>
+						<td>.mSwipe-items</td>
+					</tr>
+					<tr>
+						<td>animated</td>
+						<td>动画方式，目前主要有三种：0移动，1缩放，2覆盖</td>
+						<td>0</td>
+					</tr>
+					<tr>
+						<td>scaleTo</td>
+						<td>缩放系数，当动画方式为1时生效，缩放系数在[0,1)内有效</td>
+						<td>0.2</td>
+					</tr>
+					<tr>
+						<td>startSlide</td>
+						<td>默认开始页面，便于调试指定页面</td>
+						<td>0</td>
+					</tr>
+					<tr>
+						<td>speed</td>
+						<td>页面切换动画持续时间，单位毫秒</td>
+						<td>400</td>
+					</tr>
+					<tr>
+						<td>distanceValue</td>
+						<td>切换临界值，只有当触屏超过临界值，才会切换下一页</td>
+						<td>100</td>
+					</tr>
+					<tr>
+						<td>direction</td>
+						<td>切换方向，x水平和y垂直,传递xy之外的字符都取默认y</td>
+						<td>y</td>
+					</tr>
+					<tr>
+						<td>disableToNext</td>
+						<td>是否禁止向上（左）滑动</td>
+						<td>false</td>
+					</tr>
+					<tr>
+						<td>disableToPrev</td>
+						<td>是否禁止向下（右）滑动</td>
+						<td>false</td>
+					</tr>
+					<tr>
+						<td>disableToLoop</td>
+						<td>是否开启循环切换</td>
+						<td>false</td>
+					</tr>
+					<tr>
+						<td>disablePreventDefault</td>
+						<td>是否禁止默认事件</td>
+						<td>true</td>
+					</tr>
+					<tr>
+						<td>disableStopPropagation</td>
+						<td>是否禁止事件冒泡</td>
+						<td>true</td>
+					</tr>
+					<tr>
+						<td>callback</td>
+						<td>回调函数，可以带mSwipe的实例对象参数</td>
+						<td>null</td>
+					</tr>
+					<tr>
+						<td>bindToWrapper</td>
+						<td>事件是否绑定在容器元素上</td>
+						<td>true</td>
+					</tr>
+				</table>
+			</div>
+		</li>
+	</ul>
+</div>
+</body>
 </html>

@@ -5,6 +5,8 @@
 	<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no"/>
 	<meta name="format-detection" content="telephone=no"/>
 	<title>mSwipe.js</title>
+	<link rel="stylesheet" href="../../css/common.css"/>
+	<link rel="stylesheet" href="../../css/mSwipe.css"/>
 	<link rel="stylesheet" href="./css/css.css"/>
 	<script src="../../src/BASE.js"></script>
 	<script src="../../src/mSwipe.js"></script>
@@ -13,7 +15,9 @@
 			var mSwipe = BASE.COM.mSwipe.init('mSwipe', {
 				direction  : 'y',
 				startSlide : 0,
-				animated   : 1
+				speed      : 600,
+				animated   : 2,
+				drag:false
 			});
 		}
 	</script>
