@@ -12,7 +12,7 @@ body{
 	height: 100%;
 }
 body{
-	font:18px/2 'Microsoft YaHei';
+	font:16px/2 'Microsoft YaHei';
 }
 p{
 	padding: 5px 0;
@@ -26,12 +26,14 @@ li{
 /*Index*/
 .mIndexHeader{ margin-bottom: 0; height: 50px; text-align: center; }
 .mIndexHeader ul{height: 50px; background-color: #000;}
-.mIndexHeader li{ float: left; width: 33%; height: 50px; line-height: 50px; color: #fff; font-size: 18px; }
+.mIndexHeader li{ float: left; width: 25%; height: 50px; line-height: 50px; color: #fff; font-size: 18px; }
 .mIndexHeader li:active{ background-color: #333; }
 .mIndexHeader li.current{ background-color: #0174ba;}
 .mIndexContent{ background-color: #fff; position: absolute; top: 50px; left: 0; right: 0; bottom: 0; }
+.mIndexContent p{ margin: 5px 0; padding: 5px; line-height: 1.5; border-radius: 5px;}
 .mIndexTable{
 	width: 100%;
+	min-width: 800px;
 	border-collapse: collapse;
 }
 .mIndexTable th,
@@ -43,8 +45,22 @@ li{
 .mIndexTable th{
 	text-align: center;
 }
-
-
+.mPre{
+	background-color: #444; color: #fff;
+}
+.iscrollBox {
+	position: absolute;
+	top: 0;
+	left: 10px;
+	right: 10px;
+	bottom: 10px;
+	overflow: hidden;
+}
+.options {
+	border: 1px solid #aaa;
+	margin-bottom: 8px;
+	border-radius: 5px;
+}
 
 
 

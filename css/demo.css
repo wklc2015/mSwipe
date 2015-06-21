@@ -1,36 +1,36 @@
 @charset "utf-8";
 /*test*/
-.p1{
+.mSwipeChild .p1{
     background-color: #960;
 }
-.p2{
+.mSwipeChild .p2{
     background-color: #C96;
 }
-.p3{
+.mSwipeChild .p3{
     background-color: #96F;
 }
-.p4{
+.mSwipeChild .p4{
     background-color: #093;
 }
-.p5{
+.mSwipeChild .p5{
     background-color: #69F;
 }
-.p6{
+.mSwipeChild .p6{
     background-color: #93C;
 }
-.p7{
+.mSwipeChild .p7{
     background-color: #96F;
 }
-.p8{
+.mSwipeChild .p8{
     background-color: #960;
 }
-.p9{
+.mSwipeChild .p9{
     background-color: #69F;
 }
-.p10{
+.mSwipeChild .p10{
     background-color: #96F;
 }
-.page h1{
+.mSwipeChild .page h1{
     font-size: 20px;
     width: 60px;
     height: 60px;
@@ -45,7 +45,7 @@
     position: relative;
     top: 20px;
 }
-.page p{
+.mSwipeChild .page p{
     width: 50%;
     margin: 10px auto 0;
     background-color: #555;
