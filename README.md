@@ -7,7 +7,7 @@
 动画效果目前支持三种：平移，缩放，覆盖。
 
 具体文档可以到我的网站上查看
-http://mSwipe.lckun.com/index.html
+http://mswipe.lckun.com/index.html
 
 目前第一个版本基本上已经完善了，当前版本上不会增加太多其他功能，只会对其中bug做一些修复。
 
