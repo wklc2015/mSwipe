@@ -1,6 +1,6 @@
 # mSwipe
 <h3>2015/06/24</h3>
-
+http://mswipe.lckun.com/index.html
 采用zepto.js改写了插件，修复了事件绑定和动画效果，流畅性更好。<br>
 修复了部分参数。<br>
 
