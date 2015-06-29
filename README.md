@@ -1,4 +1,10 @@
 # mSwipe
+<h3>2015/06/28</h3>
+修改了插件调用方式<br>
+增加icons图标指示当前页<br><br>
+增加循环切换<br>
+修复了slideTo方法，添加参数指示向前或向后切换<br>
+<br>
 <h3>2015/06/24</h3>
 http://mswipe.lckun.com/index.html<br>
 采用zepto.js改写了插件，修复了事件绑定和动画效果，流畅性更好。<br>
