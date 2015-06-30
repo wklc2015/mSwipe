@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport"
+		  content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no"/>
+	<meta name="format-detection" content="telephone=no"/>
+	<title>mSwipe.js</title>
+	<link rel="stylesheet" href="../../css/common.css"/>
+	<link rel="stylesheet" href="../../css/mSwipe.css"/>
+	<link rel="stylesheet" href="./css/css.css"/>
+	<script src="../../lib/zepto-docs.min.js"></script>
+	<script src="../../src/zepto.mSwipe.js"></script>
+	<script>
+		function Loaded() {
+			var $mSwipe = $('#mSwipe');
+			$mSwipe.mSwipe({
+				animated   : 1,
+				startSlide : 0,
+				zoomIng    : 0.2,
+				loop       : false
+			});
+		}
+	</script>
+</head>
+
+<body onload="Loaded()">
+<div class="mSwipe-container" id="mSwipe">
+	<ul class="mSwipe-wrap">
+		<li class="mSwipe-items">
+			<div class="page p1">
+				<img src="./img/logo.png" class="pa logo">
+				<img src="./img/p1_1.png" class="pa text_1">
+				<img src="./img/p1_2.png" class="pa text_2">
+				<a href="tel:02869888888">
+					<img src="./img/tel.png" class="pa tel">
+				</a>
+			</div>
+		</li>
+		<li class="mSwipe-items">
+			<div class="page p2">
+				<img src="./img/logo.png" class="pa logo">
+				<img src="./img/p2_1.png" class="pa text_1">
+				<img src="./img/p2_2.png" class="pa text_2">
+				<a href="tel:02869888888">
+					<img src="./img/tel.png" class="pa tel">
+				</a>
+			</div>
+		</li>
+		<li class="mSwipe-items">
+			<div class="page p3">
+				<img src="./img/logo.png" class="pa logo">
+				<img src="./img/p3_1.png" class="pa text_1">
+				<img src="./img/p3_2.png" class="pa text_2">
+				<a href="tel:02869888888">
+					<img src="./img/tel.png" class="pa tel">
+				</a>
+			</div>
+		</li>
+		<li class="mSwipe-items">
+			<div class="page p4">
+				<img src="./img/logo.png" class="pa logo">
+				<img src="./img/p4_1.png" class="pa text_1">
+				<img src="./img/p4_2.png" class="pa text_2">
+				<a href="tel:02869888888">
+					<img src="./img/tel.png" class="pa tel">
+				</a>
+			</div>
+		</li>
+		<li class="mSwipe-items">
+			<div class="page p5">
+				<img src="./img/logo.png" class="pa logo">
+				<img src="./img/p5_1.png" class="pa text_1">
+				<img src="./img/p5_2.png" class="pa text_2">
+				<a href="tel:02869888888">
+					<img src="./img/tel.png" class="pa tel">
+				</a>
+			</div>
+		</li>
+		<li class="mSwipe-items">
+			<div class="page p6">
+				<img src="./img/logo.png" class="pa logo">
+				<img src="./img/p6_1.png" class="pa text_1">
+				<img src="./img/p6_2.png" class="pa text_2">
+				<img src="./img/p6_3.png" class="pa text_3">
+				<a href="tel:02869888888">
+					<img src="./img/tel.png" class="pa tel">
+				</a>
+			</div>
+		</li>
+	</ul>
+</div>
+</body>
+</html>

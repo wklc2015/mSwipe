@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no"/>
+	<meta name="format-detection" content="telephone=no"/>
+	<title>mSwipe.js</title>
+	<link rel="stylesheet" href="../css/common.css"/>
+	<link rel="stylesheet" href="../css/mSwipe.css"/>
+	<link rel="stylesheet" href="./css/css.css"/>
+	<script src="../lib/zepto-docs.min.js"></script>
+	<script src="../lib/BASE.js"></script>
+	<script src="../src/zepto.mSwipe.js"></script>
+	<script src="./js/js.js"></script>
+	<script>
+		$(document).on('touchmove', function(e){
+			return false;
+		});
+	</script>
+	<style>
+		.loadWraper{ position: absolute; top: 0; left: 0; right: 0; bottom: 0; background-color: #000; }
+		.loadWraper span{ display: block;
+			width: 100px; height: 100px; line-height: 100px; text-align: center; font-size: 20px;
+			position: absolute; left: 50%; top: 50%; margin: -50px 0 0 -50px;
+			background-color: #fff; color: #333; z-index: 100; border-radius: 50%;
+		}
+	</style>
+</head>
+
+<body>
+<div class="loadWraper" id="imgLoading">
+	<span>0%</span>
+</div>
+<div class="mSwipe-container" id="mSwipe">
+	<ul class="mSwipe-wrap">
+		<li class="mSwipe-items">
+			<div class="page p1">
+				<img src="./img/logo.png" class="pa logo">
+				<img src="./img/p1_1.png" class="pa text_1">
+				<img src="./img/p1_2.png" class="pa text_2">
+				<a href="tel:02869888888">
+					<img src="./img/tel.png" class="pa tel">
+				</a>
+			</div>
+		</li>
+		<li class="mSwipe-items">
+			<div class="page p2">
+				<img src="./img/logo.png" class="pa logo">
+				<img src="./img/p2_1.png" class="pa text_1">
+				<img src="./img/p2_2.png" class="pa text_2">
+				<a href="tel:02869888888">
+					<img src="./img/tel.png" class="pa tel">
+				</a>
+			</div>
+		</li>
+		<li class="mSwipe-items">
+			<div class="page p3">
+				<img src="./img/logo.png" class="pa logo">
+				<img src="./img/p3_1.png" class="pa text_1">
+				<img src="./img/p3_2.png" class="pa text_2">
+				<a href="tel:02869888888">
+					<img src="./img/tel.png" class="pa tel">
+				</a>
+			</div>
+		</li>
+		<li class="mSwipe-items">
+			<div class="page p4">
+				<img src="./img/logo.png" class="pa logo">
+				<img src="./img/p4_1.png" class="pa text_1">
+				<img src="./img/p4_2.png" class="pa text_2">
+				<a href="tel:02869888888">
+					<img src="./img/tel.png" class="pa tel">
+				</a>
+			</div>
+		</li>
+		<li class="mSwipe-items">
+			<div class="page p5">
+				<img src="./img/logo.png" class="pa logo">
+				<img src="./img/p5_1.png" class="pa text_1">
+				<img src="./img/p5_2.png" class="pa text_2">
+				<a href="tel:02869888888">
+					<img src="./img/tel.png" class="pa tel">
+				</a>
+			</div>
+		</li>
+		<li class="mSwipe-items">
+			<div class="page p6">
+				<img src="./img/logo.png" class="pa logo">
+				<img src="./img/p6_1.png" class="pa text_1">
+				<img src="./img/p6_2.png" class="pa text_2">
+				<img src="./img/p6_3.png" class="pa text_3">
+				<a href="tel:02869888888">
+					<img src="./img/tel.png" class="pa tel">
+				</a>
+			</div>
+		</li>
+	</ul>
+</div>
+</body>
+</html>

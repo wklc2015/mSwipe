@@ -1,0 +1,106 @@
+<!doctype html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no"/>
+	<meta name="format-detection" content="telephone=no"/>
+	<title>三祺爽跳 冠军得四房</title>
+	<link rel="stylesheet" href="../../css/common.css"/>
+	<link rel="stylesheet" href="../../css/mSwipe.css"/>
+	<link rel="stylesheet" href="./css/css.css"/>
+	<script src="../../lib/zepto-docs.min.js"></script>
+	<script src="../../lib/BASE.js"></script>
+	<script src="../../src/zepto.mSwipe.js"></script>
+	<script>
+		function Loaded() {
+			var mSwipe = BASE.COM.mSwipe.init('mSwipe', {
+				autoPlay  : 0,
+				animated  : 0,
+				startSlide: 0
+			});
+			mSwipe.on('pageCallback', function(num) {
+				$('.page').each(function(i) {
+					if(i == num){
+						$(this).addClass('show');
+					} else{
+						$(this).removeClass('show');
+					}
+				})
+			})
+		}
+	</script>
+</head>
+
+<body onload="Loaded()">
+<div class="mSwipe-container" id="mSwipe">
+	<ul class=mSwipe-wrap>
+		<li class=mSwipe-items>
+			<div class="page p1 show">
+				<article class="pa p_b">
+					<a href="tel:3663737" class="pa phone animated infinite ani_phone"></a>
+					<img data-src="img/p1_1.png" class="pa t1 isAni animated fadeInUp delay_1" alt=""/>
+					<img data-src="img/p1_2.png" class="pa t2 isAni animated fadeInUp delay_2" alt=""/>
+					<img data-src="img/p1_3.png" class="pa t3 isAni animated fadeInUp delay_3" alt=""/>
+					<img data-src="img/p1_4.png" class="pa t4 animated swing delay_01" alt=""/>
+				</article>
+				<p class="pa bottom animated isAni bounceInUp delay_4"></p>
+				<p class="icons u-guideTop"></p>
+			</div>
+		</li>
+		<li class=mSwipe-items>
+			<div class="page p2">
+				<article class="pa p_b">
+					<a href="tel:3663737" class="pa phone animated infinite ani_phone"></a>
+					<img data-src="img/p2_1.png" class="pa t1 animated wobble delay_01" alt=""/>
+					<img data-src="img/p2_2.png" class="pa t2 isAni animated fadeInUp delay_2" alt=""/>
+					<img data-src="img/p2_3.png" class="pa t3 isAni animated fadeInUp delay_3" alt=""/>
+					<img data-src="img/p2_4.png" class="pa t4 isAni animated fadeInUp delay_4" alt=""/>
+					<img data-src="img/p2_5.png" class="pa t5 animated swing delay_1" alt=""/>
+				</article>
+				<p class="pa bottom animated isAni bounceInUp delay_5"></p>
+				<p class="icons u-guideTop"></p>
+			</div>
+		</li>
+		<li class=mSwipe-items>
+			<div class="page p3">
+				<article class="pa p_b p3_b">
+					<a href="#" class="pa phone animated infinite ani_phone"></a>
+					<img data-src="img/p3_1.png" class="pa t1 isAni animated fadeInUp delay_2" alt=""/>
+					<img data-src="img/p3_2.png" class="pa t2 isAni animated fadeInUp delay_3" alt=""/>
+					<img data-src="img/p3_3.png" class="pa t3 animated rubberBand delay_01" alt=""/>
+					<img data-src="img/p3_4.png" class="pa t4 isAni animated zoomIn delay_1" alt=""/>
+				</article>
+				<p class="pa bottom animated isAni bounceInUp delay_4"></p>
+				<p class="icons u-guideTop"></p>
+			</div>
+		</li>
+		<li class=mSwipe-items>
+			<div class="page p4">
+				<article class="pa p_b">
+					<a href="#" class="pa phone animated infinite ani_phone"></a>
+					<img data-src="img/p4_1.png" class="pa t1 isAni animated fadeInUp delay_1" alt=""/>
+					<img data-src="img/p4_2.png" class="pa t2 isAni animated fadeInUp delay_2" alt=""/>
+					<img data-src="img/p4_3.png" class="pa t3 isAni animated fadeInUp delay_3" alt=""/>
+					<img data-src="img/p4_4.png" class="pa t4 isAni animated fadeInUp delay_4" alt=""/>
+					<img data-src="img/p4_5.png" class="pa t5 animated swing delay_01" alt=""/>
+				</article>
+				<p class="pa bottom animated isAni bounceInUp delay_5"></p>
+				<p class="icons u-guideTop"></p>
+			</div>
+		</li>
+		<li class=mSwipe-items>
+			<div class="page p5">
+				<article class="pa p_b p5_b">
+					<a href="#" class="pa phone animated infinite ani_phone"></a>
+					<img data-src="img/p5_1.png" class="t1" alt="" id="code"/>
+					<img data-src="img/p5_2.png" class="t2 isAni animated bounceInDown" alt=""/>
+					<img data-src="img/home.png" class="pa home" alt="" id="btnHome"/>
+				</article>
+				<p class="pa bottom animated isAni bounceInUp delay_1"></p>
+				<p class="icons u-guideTop"></p>
+			</div>
+		</li>
+	</ul>
+</div>
+</body>
+</html>

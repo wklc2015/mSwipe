@@ -6,55 +6,45 @@
 	box-sizing: border-box;
 	-webkit-tap-highlight-color: rgba(0, 0, 0, 0);
 }
-
 html {
 	font-size: 50px;
 }
-
 body {
 	font: 16px/2 'Microsoft YaHei';
 }
-
 h1 {
 	font-size: 200%;
 }
-
 h2 {
 	font-size: 150%;
 }
-
 h3 {
 	font-size: 120%;
 }
-
-h4, h5, h6 {
+h4,
+h5,
+h6 {
 	font-size: 100%;
 }
-
 a {
 	text-decoration: none;
 	color: #555;
 	outline: none;
 }
-
 img {
 	border: none;
 }
-
 ul,
 li {
 	list-style: none;
 }
-
 p {
 	padding: 0.2em 0;
 	line-height: 2;
 }
-
 .pa {
 	position: absolute;
 }
-
 .pr {
 	position: relative;
 }
