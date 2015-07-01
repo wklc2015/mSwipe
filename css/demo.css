@@ -1,227 +1,221 @@
 @charset "utf-8";
 .mSwitch-container {
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    overflow: hidden;
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	overflow: hidden;
 }
-
 .mSwitch-Header {
-    width: 100%;
-    height: 60px;
-    position: absolute;
-    background-color: #333;
-    overflow: hidden;
+	width: 100%;
+	height: 60px;
+	position: absolute;
+	background-color: #333;
+	overflow: hidden;
 }
-
 .mSwitch-Header li {
-    width: 25%;
-    height: 60px;
-    float: left;
-    line-height: 60px;
-    text-align: center;
-    color: #fff;
+	width: 25%;
+	height: 60px;
+	float: left;
+	line-height: 60px;
+	text-align: center;
+	color: #fff;
 }
-
 .mSwitch-Header li.active {
-    background-color: #0174ba;
+	background-color: #0174ba;
 }
-
 .mSwitch-content {
-    position: absolute;
-    top: 60px;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    overflow: hidden;
-    -webkit-perspective: 1200px;
-    perspective: 1200px;
+	position: absolute;
+	top: 60px;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	overflow: hidden;
+	-webkit-perspective: 1200px;
+	perspective: 1200px;
 }
-
 .mSwitch-item {
-    position: absolute;
-    top:0;
-    bottom:0;
-    left:0;
-    right:0;
-    visibility: hidden;
-    display: none;
-    overflow: hidden;
-    -webkit-backface-visibility: hidden;
-    backface-visibility: hidden;
-    -webkit-transform: translate3d(0, 0, 0);
-    transform: translate3d(0, 0, 0);
-    -webkit-transform-style: preserve-3d;
-    transform-style: preserve-3d;
+	position: absolute;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	visibility: hidden;
+	display: none;
+	overflow: hidden;
+	-webkit-backface-visibility: hidden;
+	backface-visibility: hidden;
+	-webkit-transform: translate3d(0, 0, 0);
+	transform: translate3d(0, 0, 0);
+	-webkit-transform-style: preserve-3d;
+	transform-style: preserve-3d;
 }
 .pt-page-current {
-    visibility: visible;
-    display: block;
-    z-index: 1;
+	visibility: visible;
+	display: block;
+	z-index: 1;
 }
-
 /*content*/
+
 .page {
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    overflow: hidden;
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	overflow: hidden;
 }
-
 .mPre {
-    background-color: #444;
-    color: #fff;
-    border-radius: 5px;
-    padding: 5px;
+	background-color: #444;
+	color: #fff;
+	border-radius: 5px;
+	padding: 5px;
 }
-
 .iscrollBox {
-    position: absolute;
-    top: 10px;
-    left: 10px;
-    right: 10px;
-    bottom: 10px;
-    overflow: hidden;
+	position: absolute;
+	top: 10px;
+	left: 10px;
+	right: 10px;
+	bottom: 10px;
+	overflow: hidden;
 }
-
 .options {
-    border: 1px solid #aaa;
-    margin-bottom: 8px;
-    padding: 5px;
-    border-radius: 5px;
+	border: 1px solid #aaa;
+	margin-bottom: 8px;
+	padding: 5px;
+	border-radius: 5px;
 }
-
 /*test*/
+
 .mSwipeChild .p1 {
-    background-color: #960;
+	background-color: #960;
 }
-
 .mSwipeChild .p2 {
-    background-color: #C96;
+	background-color: #C96;
 }
-
 .mSwipeChild .p3 {
-    background-color: #96F;
+	background-color: #96F;
 }
-
 .mSwipeChild .p4 {
-    background-color: #093;
+	background-color: #093;
 }
-
 .mSwipeChild .p5 {
-    background-color: #69F;
+	background-color: #69F;
 }
-
 .mSwipeChild .p6 {
-    background-color: #93C;
+	background-color: #93C;
 }
-
 .mSwipeChild .p7 {
-    background-color: #96F;
+	background-color: #96F;
 }
-
 .mSwipeChild .p8 {
-    background-color: #960;
+	background-color: #960;
 }
-
 .mSwipeChild .p9 {
-    background-color: #69F;
+	background-color: #69F;
 }
-
 .mSwipeChild .p10 {
-    background-color: #96F;
+	background-color: #96F;
 }
-
 .mSwipeChild .page h1 {
-    font-size: 20px;
-    width: 60px;
-    height: 60px;
-    line-height: 60px;
-    text-align: center;
-    border-radius: 50%;
-    background-color: #555;
-    color: #fff;
-    margin-left: auto;
-    margin-right: auto;
-    margin-bottom: 40px;
-    position: relative;
-    top: 20px;
+	font-size: 20px;
+	width: 60px;
+	height: 60px;
+	line-height: 60px;
+	text-align: center;
+	border-radius: 50%;
+	background-color: #555;
+	color: #fff;
+	margin-left: auto;
+	margin-right: auto;
+	margin-bottom: 40px;
+	position: relative;
+	top: 20px;
 }
-
 .mSwipeChild .page p {
-    width: 50%;
-    padding: 0;
-    margin: 10px auto 0;
-    background-color: #555;
-    font: 16px/2.5 'Microsoft YaHei';
-    color: #fff;
-    -webkit-border-radius: 5px;
-    border-radius: 5px;
-    text-align: center;
+	width: 50%;
+	padding: 0;
+	margin: 10px auto 0;
+	background-color: #555;
+	font: 16px/2.5 'Microsoft YaHei';
+	color: #fff;
+	-webkit-border-radius: 5px;
+	border-radius: 5px;
+	text-align: center;
 }
-
+.mSwipeChild .page p[data-btn]{
+	cursor: pointer;
+}
 .mSwipeChild .page p a {
-    display: block;
-    color: #fff;
-    text-decoration: none;
+	display: block;
+	color: #fff;
+	text-decoration: none;
 }
-h3 span{
-    font-weight: normal;
-    font-size: 0.8em;
+h3 span {
+	font-weight: normal;
+	font-size: 0.8em;
 }
 /*btn*/
+
 .indexHeader {
-    position: absolute;
-    width: 100%;
-    height: 80px;
-    background-color: #444;
-    z-index: 100;
+	position: absolute;
+	width: 100%;
+	height: 80px;
+	background-color: #444;
+	z-index: 100;
 }
-
 .indexHeader ul {
-    width: 100%;
-    height: 80px;
-    border-top: 1px solid #000;
-    border-left: 1px solid #000;
-
+	width: 100%;
+	height: 80px;
+	border-top: 1px solid #000;
+	border-left: 1px solid #000;
 }
-
 .indexHeader li {
-    float: left;
-    background-color: #343434;
-    width: 20%;
-    height: 40px;
-    line-height: 40px;
-    font-size: 18px;
-    text-align: center;
-    border-right: 1px solid #000;
-    border-bottom: 1px solid #000;
-    -webkit-box-sizing: border-box;
-    box-sizing: border-box;
-    color: #fff;
+	float: left;
+	background-color: #343434;
+	width: 20%;
+	height: 40px;
+	line-height: 40px;
+	font-size: 18px;
+	text-align: center;
+	border-right: 1px solid #000;
+	border-bottom: 1px solid #000;
+	-webkit-box-sizing: border-box;
+	box-sizing: border-box;
+	color: #fff;
 }
-
 .indexHeader li:active {
-    background-color: #111;
-    color: #fff;
+	background-color: #111;
+	color: #fff;
 }
-
-.mSwipe-demo1{ width: 100%; max-width: 500px; height: 200px; overflow: hidden; position: relative; top: 10px; margin-bottom: 20px;}
-.mSwipe-demo1 img{width: 100%; height: 100%;}
-.mSwipe-demo1 .mIconsClass{
-    -webkit-transform: translate(-50%, 0);
-    transform: translate(-50%, 0);
-    bottom: 5%;
-    right: auto;
-    left: 50%;
-    top: auto;
-    line-height: 0;
+.mSwipe-demo1 {
+	width: 100%;
+	max-width: 500px;
+	height: 200px;
+	overflow: hidden;
+	position: relative;
+	top: 10px;
+	margin-bottom: 20px;
 }
-.mSwipe-demo1 .mIconsClass li{
-    display: inline-block; margin-bottom: 0; margin-right: 5px;
+.mSwipe-demo1 img {
+	width: 100%;
+	height: 100%;
 }
-.mSwipe-demo1 .mIconsClass li:last-child{ margin-right: 0;}
+.mSwipe-demo1 .mIconsClass {
+	-webkit-transform: translate(-50%, 0);
+	transform: translate(-50%, 0);
+	bottom: 5%;
+	right: auto;
+	left: 50%;
+	top: auto;
+	line-height: 0;
+}
+.mSwipe-demo1 .mIconsClass li {
+	display: inline-block;
+	margin-bottom: 0;
+	margin-right: 5px;
+}
+.mSwipe-demo1 .mIconsClass li:last-child {
+	margin-right: 0;
+}

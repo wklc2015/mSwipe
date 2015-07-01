@@ -1,428 +1,426 @@
 <!DOCTYPE html>
 <html>
 
-<head>
-    <meta charset="utf-8">
-    <meta name="viewport"
-          content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no"/>
-    <meta name="format-detection" content="telephone=no"/>
-    <title>index - mSwipe.js</title>
-    <link rel="stylesheet" href="css/common.css"/>
-    <link rel="stylesheet" href="css/mSwipe.css"/>
-    <link rel="stylesheet" href="css/demo.css"/>
-    <link rel="stylesheet" href="css/mSwitchAnimate.css"/>
-    <script src="lib/zepto-docs.min.js"></script>
-    <script src="lib/iscroll-lite.min.js"></script>
-    <script src="lib/BASE.js"></script>
-    <script src="lib/zepto.mSwitch.js"></script>
-    <script src="src/zepto.mSwipe.js"></script>
-    <script src="src/js.js"></script>
-</head>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<meta name="format-detection" content="telephone=no" />
+		<title>index - mSwipe.js</title>
+		<link rel="stylesheet" href="css/common.css" />
+		<link rel="stylesheet" href="css/mSwipe.css" />
+		<link rel="stylesheet" href="css/demo.css" />
+		<link rel="stylesheet" href="css/mSwitchAnimate.css" />
+		<script src="lib/zepto-docs.min.js"></script>
+		<script src="lib/iscroll-lite.min.js"></script>
+		<script src="lib/BASE.js"></script>
+		<script src="lib/zepto.mSwitch.js"></script>
+		<script src="src/zepto.mSwipe.js"></script>
+		<script src="src/js.js"></script>
+	</head>
 
-<body>
-<section class="mSwitch-container" id="mSwitch">
-    <header class="mSwitch-Header">
-        <ul>
-            <li class="mSwitch-ctrl">Home</li>
-            <li class="mSwitch-ctrl">API</li>
-            <li class="mSwitch-ctrl">Demo</li>
-            <li class="mSwitch-ctrl">Start</li>
-        </ul>
-    </header>
-    <div class="mSwitch-content">
-        <article class="mSwitch-item">
-            <div class="page p1">
-                <div class="iscrollBox" id="iscroll_1">
-                    <div class="iscrollChild">
-                        <h3>2015/06/28 <span>v2.1</span></h3>
-                        <p>修改了插件调用方式</p>
-                        <p>增加icons图标指示当前页</p>
-                        <p>增加循环切换</p>
-                        <p>修复了slideTo方法，添加参数指示向前或向后切换</p>
+	<body>
+		<section class="mSwitch-container" id="mSwitch">
+			<header class="mSwitch-Header">
+				<ul>
+					<li class="mSwitch-ctrl">Home</li>
+					<li class="mSwitch-ctrl">API</li>
+					<li class="mSwitch-ctrl">Demo</li>
+					<li class="mSwitch-ctrl">Start</li>
+				</ul>
+			</header>
+			<div class="mSwitch-content">
+				<article class="mSwitch-item">
+					<div class="page p1">
+						<div class="iscrollBox" id="iscroll_1">
+							<div class="iscrollChild">
+								<h3>2015/06/28 <span>v2.1</span></h3>
+								<p>修改了插件调用方式</p>
+								<p>增加icons图标指示当前页</p>
+								<p>增加循环切换</p>
+								<p>修复了slideTo方法，添加参数指示向前或向后切换</p>
 
+								<h3>2015/06/24</h3>
 
-                        <h3>2015/06/24</h3>
+								<p>采用zepto.js改写了插件，修复了事件绑定和动画效果，流畅性更好。</p>
 
-                        <p>采用zepto.js改写了插件，修复了事件绑定和动画效果，流畅性更好。</p>
+								<p>增加了一个demo</p>
 
-                        <p>增加了一个demo</p>
+								<p>修复了部分参数。</p>
 
-                        <p>修复了部分参数。</p>
+								<h3>2015/06/22</h3>
 
-                        <h3>2015/06/22</h3>
+								<p>
+									H5单页滑动是移动端比较常见的效果，原理和PC端的鼠标拖拽类似，网上也有很多作者开发了自己的H5单页滑动插件，作为一个coder，将别人优秀的代码原理运用在自己的代码中才是一种进步。</p>
 
-                        <p>
-                            H5单页滑动是移动端比较常见的效果，原理和PC端的鼠标拖拽类似，网上也有很多作者开发了自己的H5单页滑动插件，作为一个coder，将别人优秀的代码原理运用在自己的代码中才是一种进步。</p>
+								<p>
+									我知道的早期移动端滑动插件比较好的是Swipe.js，这个插件功能上比较单一，主要用于水平方向的的焦点图片切换，或许作者的目的也仅限于此吧，这个插件大概有两年多没有更新了。他和iscoll.js在事件绑定方式都一样，运行起来都非常流畅。</p>
 
-                        <p>
-                            我知道的早期移动端滑动插件比较好的是Swipe.js，这个插件功能上比较单一，主要用于水平方向的的焦点图片切换，或许作者的目的也仅限于此吧，这个插件大概有两年多没有更新了。他和iscoll.js在事件绑定方式都一样，运行起来都非常流畅。</p>
+								<p>Swiper.js是另一个滑动插件，和swipe.js名字很相似，但功能上更加丰富，支持移动端和PC端，全屏滑动和局部滑动，官网上文档和API都很详细。</p>
 
-                        <p>Swiper.js是另一个滑动插件，和swipe.js名字很相似，但功能上更加丰富，支持移动端和PC端，全屏滑动和局部滑动，官网上文档和API都很详细。</p>
+								<p>在看了许多网上优秀滑动插件代码后，就决定自己封装集成一个H5单页滑动插件，mSwipe.js就这样产生了。</p>
 
-                        <p>在看了许多网上优秀滑动插件代码后，就决定自己封装集成一个H5单页滑动插件，mSwipe.js就这样产生了。</p>
+								<p>
+									mSwipe.js采用原生js开发，之所以采用原生js开发，是考虑到在某些小应用中，结构简单，交互更少，直接采用原生js开发代码更少些。同时我也是个框架依赖者，比如jquery，zepto，相信和我一样的框架依赖者还有不少，后期也打算开发一个zepto的mSwipe.js。</p>
 
-                        <p>
-                            mSwipe.js采用原生js开发，之所以采用原生js开发，是考虑到在某些小应用中，结构简单，交互更少，直接采用原生js开发代码更少些。同时我也是个框架依赖者，比如jquery，zepto，相信和我一样的框架依赖者还有不少，后期也打算开发一个zepto的mSwipe.js。</p>
+								<p>mSwipe.js还不够完善，我还会继续开发和修复BUG，有什么问题也欢迎告诉我。</p>
 
-                        <p>mSwipe.js还不够完善，我还会继续开发和修复BUG，有什么问题也欢迎告诉我。</p>
+								<p>mSwipe.js已经提交到github上了，
+									<a href="https://github.com/wklc2015/mSwipe" target="_blank">mSwipe.js
 
-                        <p>mSwipe.js已经提交到github上了，
-                            <a href="https://github.com/wklc2015/mSwipe"
-                               target="_blank">mSwipe.js
                             </a>
-                        </p>
-                    </div>
-                </div>
-            </div>
-        </article>
-        <article class="mSwitch-item">
-            <div class="page p2">
-                <div class="iscrollBox" id="iscroll_2">
-                    <div class="iscrollChild">
-                        <p class="mPre">mSwipe = BASE.COM.mSwipe.init(container, options);</p>
+								</p>
+							</div>
+						</div>
+					</div>
+				</article>
+				<article class="mSwitch-item">
+					<div class="page p2">
+						<div class="iscrollBox" id="iscroll_2">
+							<div class="iscrollChild">
+								<p class="mPre">mSwipe = BASE.COM.mSwipe.init(container, options);</p>
 
-                        <p><strong>container</strong>为切换页面的包裹容器，是一个必填参数，可以为一个ID字符串或者DOM对象，</p>
+								<p><strong>container</strong>为切换页面的包裹容器，是一个必填参数，可以为一个ID字符串或者DOM对象，</p>
 
-                        <p><strong>options</strong>为配置参数：</p>
+								<p><strong>options</strong>为配置参数：</p>
 
-                        <div class="options">
-                            <p><strong>animated</strong>
-                                <br>动画方式，目前主要有三种：0移动，1缩放，2覆盖
-                                <br>默认值：0</p>
-                        </div>
-                        <div class="options">
-                            <p><strong>zoomTo</strong>
-                                <br>缩放目标值，当动画方式为1时生效，缩放系数在[0.5~0.9]内有效，建议取默认值0.9
-                                <br>默认值：0.9</p>
-                        </div>
-                        <div class="options">
-                            <p><strong>zoomIng</strong>
-                                <br>缩放系数，当动画方式为1时生效，建议为默认
-                                <br>默认值：0.2</p>
-                        </div>
-                        <div class="options">
-                            <p><strong>startSlide</strong>
-                                <br>默认开始页面，便于调试指定页面
-                                <br>默认值：0</p>
-                        </div>
-                        <div class="options">
-                            <p><strong>speed</strong>
-                                <br>页面切换动画持续时间，单位毫秒
-                                <br>默认值：300</p>
-                        </div>
-                        <div class="options">
-                            <p><strong>direction</strong>
-                                <br>切换方向，x水平和y垂直,传递xy之外的字符都取默认y
-                                <br>默认值：y</p>
-                        </div>
-                        <div class="options">
-                            <p><strong>distanceValue</strong>
-                                <br>切换临界值，只有当触屏超过临界值，才会切换下一页
-                                <br>默认值：10</p>
-                        </div>
-                        <div class="options">
-                            <p><strong>loop</strong>
-                                <br>是否循环切换
-                                <br>默认值：true</p>
-                        </div>
-                        <div class="options">
-                            <p><strong>disableToNext</strong>
-                                <br>是否禁止向上（左）滑动
-                                <br>默认值：false</p>
-                        </div>
-                        <div class="options">
-                            <p><strong>disableToPrev</strong>
-                                <br>是否禁止向下（右）滑动
-                                <br>默认值：false</p>
-                        </div>
-                        <div class="options">
-                            <p><strong>translateZ</strong>
-                                <br>是否采用3d加速
-                                <br>默认值：true</p>
-                        </div>
-                        <div class="options">
-                            <p><strong>bindToContainer</strong>
-                                <br>事件是否绑定在容器元素上
-                                <br>默认值：true</p>
-                        </div>
+								<div class="options">
+									<p><strong>animated</strong>
+										<br>动画方式，目前主要有三种：0移动，1缩放，2覆盖
+										<br>默认值：0</p>
+								</div>
+								<div class="options">
+									<p><strong>zoomTo</strong>
+										<br>缩放目标值，当动画方式为1时生效，缩放系数在[0.5~0.9]内有效，建议取默认值0.9
+										<br>默认值：0.9</p>
+								</div>
+								<div class="options">
+									<p><strong>zoomIng</strong>
+										<br>缩放系数，当动画方式为1时生效，建议为默认
+										<br>默认值：0.2</p>
+								</div>
+								<div class="options">
+									<p><strong>startSlide</strong>
+										<br>默认开始页面，便于调试指定页面
+										<br>默认值：0</p>
+								</div>
+								<div class="options">
+									<p><strong>speed</strong>
+										<br>页面切换动画持续时间，单位毫秒
+										<br>默认值：300</p>
+								</div>
+								<div class="options">
+									<p><strong>direction</strong>
+										<br>切换方向，x水平和y垂直,传递xy之外的字符都取默认y
+										<br>默认值：y</p>
+								</div>
+								<div class="options">
+									<p><strong>distanceValue</strong>
+										<br>切换临界值，只有当触屏超过临界值，才会切换下一页
+										<br>默认值：10</p>
+								</div>
+								<div class="options">
+									<p><strong>loop</strong>
+										<br>是否循环切换
+										<br>默认值：true</p>
+								</div>
+								<div class="options">
+									<p><strong>disableToNext</strong>
+										<br>是否禁止向上（左）滑动
+										<br>默认值：false</p>
+								</div>
+								<div class="options">
+									<p><strong>disableToPrev</strong>
+										<br>是否禁止向下（右）滑动
+										<br>默认值：false</p>
+								</div>
+								<div class="options">
+									<p><strong>translateZ</strong>
+										<br>是否采用3d加速
+										<br>默认值：true</p>
+								</div>
+								<div class="options">
+									<p><strong>bindToContainer</strong>
+										<br>事件是否绑定在容器元素上
+										<br>默认值：true</p>
+								</div>
 
-                        <div class="options">
-                            <p><strong>drag</strong>
-                                <br>是否开启鼠标(手指)跟随移动，类似PC端拖拽
-                                <br>默认值：true</p>
-                        </div>
-                        <div class="options">
-                            <p><strong>bind</strong>
-                                <br>是否绑定鼠标（触屏）事件，某些情况下不需要绑定事件，只需要调用slideTo方法
-                                <br>默认值：true</p>
-                        </div>
-                        <div class="options">
-                            <p><strong>showIcons</strong>
-                                <br>是否显示icons小图标指示当前页
-                                <br>默认值：false</p>
-                        </div>
-                        <div class="options">
-                            <p><strong>iconsClass</strong>
-                                <br>添加icons小图标的类，用于自定义样式
-                                <br>默认值：null</p>
-                        </div>
-                        <div class="options">
-                            <p><strong>autoPlay</strong>
-                                <br>是否自动切换,autoPlay和loop完全不一样
-                                <br>默认值：false</p>
-                        </div>
+								<div class="options">
+									<p><strong>drag</strong>
+										<br>是否开启鼠标(手指)跟随移动，类似PC端拖拽
+										<br>默认值：true</p>
+								</div>
+								<div class="options">
+									<p><strong>bind</strong>
+										<br>是否绑定鼠标（触屏）事件，某些情况下不需要绑定事件，只需要调用slideTo方法
+										<br>默认值：true</p>
+								</div>
+								<div class="options">
+									<p><strong>showIcons</strong>
+										<br>是否显示icons小图标指示当前页
+										<br>默认值：false</p>
+								</div>
+								<div class="options">
+									<p><strong>iconsClass</strong>
+										<br>添加icons小图标的类，用于自定义样式
+										<br>默认值：null</p>
+								</div>
+								<div class="options">
+									<p><strong>autoPlay</strong>
+										<br>是否自动切换,autoPlay和loop完全不一样
+										<br>默认值：false</p>
+								</div>
 
-                        <p>mSwipe.js的方法：</p>
+								<p>mSwipe.js的方法：</p>
 
+								<p>mSwipe.js的方法：</p>
 
-                        <p>mSwipe.js的方法：</p>
+								<div class="options">
+									<p><strong>mSwipe.prev()</strong>
+										<br>切换到上一页</p>
+								</div>
+								<div class="options">
+									<p><strong>mSwipe.next()</strong>
+										<br>切换到下一页</p>
+								</div>
+								<div class="options">
+									<p><strong>mSwipe.slideTo(num, speed)</strong>
+										<br>切换到目标页，num为目标页序号，从0开始，speed为切换动画速度</p>
+								</div>
+								<div class="options">
+									<p><strong>mSwipe.disableToNext()</strong>
+										<br>禁止向上（左）切换</p>
+								</div>
+								<div class="options">
+									<p><strong>mSwipe.disableToPrev()</strong>
+										<br>禁止向下（右）切换</p>
+								</div>
+								<div class="options">
+									<p><strong>mSwipe.enableToNext()</strong>
+										<br>开启向上（左）切换</p>
+								</div>
+								<div class="options">
+									<p><strong>mSwipe.enableToPrev()</strong>
+										<br>开启向下（右）切换</p>
+								</div>
+								<div class="options">
+									<p><strong>mSwipe.getIndex()</strong>
+										<br>获取当前页面</p>
+								</div>
+								<div class="options">
+									<p><strong>mSwipe.getLength()</strong>
+										<br>获取页面数</p>
+								</div>
 
-                        <div class="options">
-                            <p><strong>mSwipe.prev()</strong>
-                                <br>切换到上一页</p>
-                        </div>
-                        <div class="options">
-                            <p><strong>mSwipe.next()</strong>
-                                <br>切换到下一页</p>
-                        </div>
-                        <div class="options">
-                            <p><strong>mSwipe.slideTo(num, speed)</strong>
-                                <br>切换到目标页，num为目标页序号，从0开始，speed为切换动画速度</p>
-                        </div>
-                        <div class="options">
-                            <p><strong>mSwipe.disableToNext()</strong>
-                                <br>禁止向上（左）切换</p>
-                        </div>
-                        <div class="options">
-                            <p><strong>mSwipe.disableToPrev()</strong>
-                                <br>禁止向下（右）切换</p>
-                        </div>
-                        <div class="options">
-                            <p><strong>mSwipe.enableToNext()</strong>
-                                <br>开启向上（左）切换</p>
-                        </div>
-                        <div class="options">
-                            <p><strong>mSwipe.enableToPrev()</strong>
-                                <br>开启向下（右）切换</p>
-                        </div>
-                        <div class="options">
-                            <p><strong>mSwipe.getIndex()</strong>
-                                <br>获取当前页面</p>
-                        </div>
-                        <div class="options">
-                            <p><strong>mSwipe.getLength()</strong>
-                                <br>获取页面数</p>
-                        </div>
+								<p>mSwipe.js回调函数绑定：</p>
 
-                        <p>mSwipe.js回调函数绑定：</p>
+								<p>mSwipe.js采用iscro.js的回调函数绑定方式。</p>
 
-                        <p>mSwipe.js采用iscro.js的回调函数绑定方式。</p>
+								<p class="mPre">mSwipe.on(type, function (args) {})</p>
 
-                        <p class="mPre">mSwipe.on(type, function (args) {})</p>
+								<p>args是一个数组，数组的第一个元素是mSwipe的实例，绑定beforeSlide事件时有第二个参数（切换的目标页面）</p>
 
-                        <p>args是一个数组，数组的第一个元素是mSwipe的实例，绑定beforeSlide事件时有第二个参数（切换的目标页面）</p>
+								<p>type可取以下值：</p>
 
-                        <p>type可取以下值：</p>
+								<div class="options">
+									<p><strong>beforeSlide</strong>
+										<br>调用slideTo方法前执行</p>
+								</div>
+								<div class="options">
+									<p><strong>transitionEnd</strong>
+										<br>动画结束后执行</p>
+								</div>
+								<div class="options">
+									<p><strong>pageCallback</strong>
+										<br>动画结束后，且页面切换成功执行</p>
+								</div>
+								<div class="options">
+									<p><strong>touchEnd</strong>
+										<br>触屏结束执行</p>
+								</div>
+								<div class="options">
+									<p><strong>touchMove</strong>
+										<br>触屏中执行</p>
+								</div>
+								<div class="options">
+									<p><strong>touchStart</strong>
+										<br>触屏开始执行</p>
+								</div>
+								<div class="options">
+									<p><strong>beforetouchStart</strong>
+										<br>开始触屏执行</p>
+								</div>
+							</div>
+						</div>
+					</div>
 
-                        <div class="options">
-                            <p><strong>beforeSlide</strong>
-                                <br>调用slideTo方法前执行</p>
-                        </div>
-                        <div class="options">
-                            <p><strong>transitionEnd</strong>
-                                <br>动画结束后执行</p>
-                        </div>
-                        <div class="options">
-                            <p><strong>pageCallback</strong>
-                                <br>动画结束后，且页面切换成功执行</p>
-                        </div>
-                        <div class="options">
-                            <p><strong>touchEnd</strong>
-                                <br>触屏结束执行</p>
-                        </div>
-                        <div class="options">
-                            <p><strong>touchMove</strong>
-                                <br>触屏中执行</p>
-                        </div>
-                        <div class="options">
-                            <p><strong>touchStart</strong>
-                                <br>触屏开始执行</p>
-                        </div>
-                        <div class="options">
-                            <p><strong>beforetouchStart</strong>
-                                <br>开始触屏执行</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
+				</article>
+				<article class="mSwitch-item">
+					<div class="page p3">
+						<div class="mSwipe-container" id="mSwipeChildWraper">
+							<ul class="mSwipe-wrap">
+								<li class="mSwipe-items mSwipeChild">
+									<div class="page p1">
+										<h1 class="preventDefault">1</h1>
 
-        </article>
-        <article class="mSwitch-item">
-            <div class="page p3">
-                <div class="mSwipe-container" id="mSwipeChildWraper">
-                    <ul class="mSwipe-wrap">
-                        <li class="mSwipe-items mSwipeChild">
-                            <div class="page p1">
-                                <h1 class="preventDefault">1</h1>
+										<p data-btn="prev">上一页</p>
 
-                                <p data-btn="prev">上一页</p>
+										<p data-btn="next">下一页</p>
+									</div>
+								</li>
+								<li class="mSwipe-items mSwipeChild">
+									<div class="page p2">
+										<h1 class="preventDefault">2</h1>
 
-                                <p data-btn="next">下一页</p>
-                            </div>
-                        </li>
-                        <li class="mSwipe-items mSwipeChild">
-                            <div class="page p2">
-                                <h1 class="preventDefault">2</h1>
+										<p data-btn="prev">上一页</p>
 
-                                <p data-btn="prev">上一页</p>
+										<p data-btn="next">下一页</p>
 
-                                <p data-btn="next">下一页</p>
+										<p data-btn="enableToPrev">开启向下滑动</p>
 
-                                <p data-btn="enableToPrev">开启向下滑动</p>
+										<p data-btn="disableToPrev">关闭向下滑动</p>
+									</div>
+								</li>
+								<li class="mSwipe-items mSwipeChild">
+									<div class="page p3">
+										<h1 class="preventDefault">3</h1>
 
-                                <p data-btn="disableToPrev">关闭向下滑动</p>
-                            </div>
-                        </li>
-                        <li class="mSwipe-items mSwipeChild">
-                            <div class="page p3">
-                                <h1 class="preventDefault">3</h1>
+										<p data-btn="prev">上一页</p>
 
-                                <p data-btn="prev">上一页</p>
+										<p data-btn="next">下一页</p>
 
-                                <p data-btn="next">下一页</p>
+										<p data-btn="enableToNext">开启向上滑动</p>
 
-                                <p data-btn="enableToNext">开启向上滑动</p>
+										<p data-btn="disableToNext">关闭向上滑动</p>
+									</div>
+								</li>
+								<li class="mSwipe-items mSwipeChild">
+									<div class="page p4">
+										<h1 class="preventDefault">4</h1>
 
-                                <p data-btn="disableToNext">关闭向上滑动</p>
-                            </div>
-                        </li>
-                        <li class="mSwipe-items mSwipeChild">
-                            <div class="page p4">
-                                <h1 class="preventDefault">4</h1>
+										<p data-btn="prev">上一页</p>
 
-                                <p data-btn="prev">上一页</p>
+										<p data-btn="next">下一页</p>
+									</div>
+								</li>
+								<li class="mSwipe-items mSwipeChild">
+									<div class="page p5">
+										<h1 class="preventDefault">5</h1>
 
-                                <p data-btn="next">下一页</p>
-                            </div>
-                        </li>
-                        <li class="mSwipe-items mSwipeChild">
-                            <div class="page p5">
-                                <h1 class="preventDefault">5</h1>
+										<p data-btn="prev">上一页</p>
 
-                                <p data-btn="prev">上一页</p>
+										<p data-btn="next">下一页</p>
+									</div>
+								</li>
+								<li class="mSwipe-items mSwipeChild">
+									<div class="page p6">
+										<h1 class="preventDefault">6</h1>
 
-                                <p data-btn="next">下一页</p>
-                            </div>
-                        </li>
-                        <li class="mSwipe-items mSwipeChild">
-                            <div class="page p6">
-                                <h1 class="preventDefault">6</h1>
+										<p data-btn="prev">上一页</p>
 
-                                <p data-btn="prev">上一页</p>
+										<p data-btn="next">下一页</p>
+									</div>
+								</li>
+								<li class="mSwipe-items mSwipeChild">
+									<div class="page p7">
+										<h1 class="preventDefault">7</h1>
 
-                                <p data-btn="next">下一页</p>
-                            </div>
-                        </li>
-                        <li class="mSwipe-items mSwipeChild">
-                            <div class="page p7">
-                                <h1 class="preventDefault">7</h1>
+										<p data-btn="prev">上一页</p>
 
-                                <p data-btn="prev">上一页</p>
+										<p data-btn="next">下一页</p>
+									</div>
+								</li>
+								<li class="mSwipe-items mSwipeChild">
+									<div class="page p8">
+										<h1 class="preventDefault">8</h1>
 
-                                <p data-btn="next">下一页</p>
-                            </div>
-                        </li>
-                        <li class="mSwipe-items mSwipeChild">
-                            <div class="page p8">
-                                <h1 class="preventDefault">8</h1>
+										<p data-btn="prev">上一页</p>
 
-                                <p data-btn="prev">上一页</p>
+										<p data-btn="next">下一页</p>
+									</div>
+								</li>
+								<li class="mSwipe-items mSwipeChild">
+									<div class="page p9">
+										<h1 class="preventDefault">9</h1>
 
-                                <p data-btn="next">下一页</p>
-                            </div>
-                        </li>
-                        <li class="mSwipe-items mSwipeChild">
-                            <div class="page p9">
-                                <h1 class="preventDefault">9</h1>
+										<p data-btn="prev">上一页</p>
 
-                                <p data-btn="prev">上一页</p>
+										<p data-btn="next">下一页</p>
+									</div>
+								</li>
+								<li class="mSwipe-items mSwipeChild">
+									<div class="page p10">
+										<h1 class="preventDefault">10</h1>
 
-                                <p data-btn="next">下一页</p>
-                            </div>
-                        </li>
-                        <li class="mSwipe-items mSwipeChild">
-                            <div class="page p10">
-                                <h1 class="preventDefault">10</h1>
+										<p data-btn="prev">上一页</p>
 
-                                <p data-btn="prev">上一页</p>
+										<p data-btn="next">下一页</p>
+									</div>
+								</li>
+							</ul>
+						</div>
+					</div>
 
-                                <p data-btn="next">下一页</p>
-                            </div>
-                        </li>
-                    </ul>
-                </div>
-            </div>
+				</article>
+				<article class="mSwitch-item">
+					<div class="page p4">
+						<div class="iscrollBox" id="iscroll_4">
+							<div class="iscrollChild">
+								<div class="mSwipe-demo1" id="mSwipe-demo1">
+									<ul class="mSwipe-wrap">
+										<li class="mSwipe-items">
+											<img src="./img/pic1.jpg">
+										</li>
+										<li class="mSwipe-items">
+											<img src="./img/pic2.jpg">
+										</li>
+										<li class="mSwipe-items">
+											<img src="./img/pic3.jpg">
+										</li>
+										<li class="mSwipe-items">
+											<img src="./img/pic4.jpg">
+										</li>
+										<li class="mSwipe-items">
+											<img src="./img/pic5.jpg">
+										</li>
+									</ul>
+								</div>
+								<p>开始使用mSwipe.js。</p>
 
-        </article>
-        <article class="mSwitch-item">
-            <div class="page p4">
-                <div class="iscrollBox" id="iscroll_4">
-                    <div class="iscrollChild">
-                        <div class="mSwipe-demo1" id="mSwipe-demo1">
-                            <ul class="mSwipe-wrap">
-                                <li class="mSwipe-items">
-                                    <img src="./img/pic1.jpg">
-                                </li>
-                                <li class="mSwipe-items">
-                                    <img src="./img/pic2.jpg">
-                                </li>
-                                <li class="mSwipe-items">
-                                    <img src="./img/pic3.jpg">
-                                </li>
-                                <li class="mSwipe-items">
-                                    <img src="./img/pic4.jpg">
-                                </li>
-                                <li class="mSwipe-items">
-                                    <img src="./img/pic5.jpg">
-                                </li>
-                            </ul>
-                        </div>
-                        <p>开始使用mSwipe.js。</p>
+								<p>引用相关js和css</p>
 
-                        <p>引用相关js和css</p>
+								<p>调用插件：</p>
 
-                        <p>调用插件：</p>
+								<p class="mPre">var mSwipe = BASE.COM.mSwipe.init(container, options);</p>
 
-                        <p class="mPre">var mSwipe = BASE.COM.mSwipe.init(container, options);</p>
+								<p>
+									<a href="./demo.html">demo</a>
+								</p>
 
+								<p>
+									<a href="./example/1/index.html">demo1</a>
+								</p>
 
-                        <p>
-                            <a href="./demo.html">demo</a>
-                        </p>
+								<p>
+									<a href="./example/2/index.html">demo2</a>
+								</p>
+								<p>
+									<a href="./example/3/index.html">demo3</a>
+								</p>
+								<p>
+									<a href="./example/4/index.html">demo4</a>
+								</p>
 
-                        <p>
-                            <a href="./example/1/index.html">demo1</a>
-                        </p>
+							</div>
+						</div>
+					</div>
 
-                        <p>
-                            <a href="./example/2/index.html">demo2</a>
-                        </p>
-                        <p>
-                            <a href="./example/3/index.html">demo3</a>
-                        </p>
-                        <p>
-                            <a href="./example/4/index.html">demo4</a>
-                        </p>
+				</article>
+			</div>
+		</section>
+		<script type="text/javascript">
+			var cnzz_protocol = (("https:" == document.location.protocol) ? " https://" : " http://");
+			document.write(unescape("%3Cspan id='cnzz_stat_icon_1255510570'%3E%3C/span%3E%3Cscript src='" + cnzz_protocol + "s95.cnzz.com/z_stat.php%3Fid%3D1255510570' type='text/javascript'%3E%3C/script%3E"));
+		</script>
+	</body>
 
-
-                    </div>
-                </div>
-            </div>
-
-        </article>
-    </div>
-</section>
-<script type="text/javascript">var cnzz_protocol = (("https:" == document.location.protocol) ? " https://" : " http://");
-document.write(unescape("%3Cspan id='cnzz_stat_icon_1255510570'%3E%3C/span%3E%3Cscript src='" + cnzz_protocol + "s95.cnzz.com/z_stat.php%3Fid%3D1255510570' type='text/javascript'%3E%3C/script%3E"));</script>
-</body>
 </html>
